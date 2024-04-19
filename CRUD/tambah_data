@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ID = $_POST['ID'];
     $Nama = $_POST['Nama'];
     $Alamat = $_POST['Alamat'];
-    $No.Telp = $_POST['No.Telp'];
+    $No.Telp = $_POST['No. Telp'];
 
-    $inserted = Contact::insert($ID, $CURRENT_JOB, $Nama, $Alamat, $Status, $No.Telp);
+    $inserted = Contact::insert($ID, $CURRENT_JOB, $Nama, $Alamat, $Status, $No. Telp);
 
     // Check if insertion was successful
     if ($inserted) {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="Alamat">Alamat:</label><br>
         <input type="varchar" ID="Alamat" Nama="Alamat"><br>
 
-        <label for="No.Telp">No.Telp:</label><br>
+        <label for="No. Telp">No.Telp:</label><br>
         <input type="varchar" ID="No.Telp" Nama="No.Telp"><br><br>
 
         <input type="Simpan" value="Simpan">
