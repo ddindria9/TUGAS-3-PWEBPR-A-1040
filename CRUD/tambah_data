@@ -1,0 +1,47 @@
+<?php
+require_once 'database.php';
+require_once 'contacts.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ID = $_POST['ID'];
+    $Nama = $_POST['Nama'];
+    $Alamat = $_POST['Alamat'];
+    $No.Telp = $_POST['No.Telp'];
+
+    $inserted = Contact::insert($ID, $CURRENT_JOB, $Nama, $Alamat, $Status, $No.Telp);
+
+    // Check if insertion was successful
+    if ($inserted) {
+        echo "New record added successfully.";
+    } else {
+        echo "Error adding record.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta Nama="viewport" content="wIDth=device-wIDth, initial-scale=1.0">
+    <title>Add New Record</title>
+</head>
+<body>
+    <h2>Add New Record</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="ID">ID:</label><br>
+        <input type="varchar" ID="ID" Nama="ID"><br>
+
+        <label for="Nama">Nama:</label><br>
+        <input type="varchar" ID="Nama" Nama="Nama"><br>
+
+        <label for="Alamat">Alamat:</label><br>
+        <input type="varchar" ID="Alamat" Nama="Alamat"><br>
+
+        <label for="No.Telp">No.Telp:</label><br>
+        <input type="varchar" ID="No.Telp" Nama="No.Telp"><br><br>
+
+        <input type="Simpan" value="Simpan">
+    </form>
+</body>
+</html>
